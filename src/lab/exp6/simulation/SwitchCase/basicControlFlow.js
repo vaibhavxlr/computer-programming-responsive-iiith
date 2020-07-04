@@ -221,34 +221,52 @@ window.view = {
 			this.codeExecutionWithColour();
 	 	if (this.currentSiblingElement.className === 'break redClass')
 			this.codeExecutionWithColourAndId('closeBrc1Id');
-		if (1 <= model.inputNumber && model.inputNumber <= 6) {
-	 		if (this.nextSiblingElement.id === 'holidayId')
+
+		if (1 <= model.inputNumber && model.inputNumber <= 5) {
+			
+			if (this.nextSiblingElement.id === 'holidayId')
 				this.codeExecutionWithColourAndId('elseIfId');
+		
 	 		else if (this.nextSiblingElement.id === 'workingdayId') {
 	 			this.codeExecutionWithColour();
 				this.changeOpacity('workingdayImage');
 				this.setInnerHtml('outputDayId', 'WORKING DAY');
-	 		}
+			 
+			}
 	 	}
 		if ( model.inputNumber > 7 ) {
-	 		if (this.nextSiblingElement.id === 'holidayId')
+	 		if (this.nextSiblingElement.id === 'holidayId') {
 				this.codeExecutionWithColourAndId('elseIfId');
+			 }
+			 
 	 		else if (this.nextSiblingElement.id === 'workingdayId') 
 				this.codeExecutionWithColourAndId('elseId');
 	 		else if (this.nextSiblingElement.id === 'invalidIPId') {
 				this.codeExecutionWithColour();
 				this.setInnerHtml('outputDayId', 'INVALID INPUT');
 	 		}
-	 	}
-	 	if (model.inputNumber === 7) {
-	 		if (this.nextSiblingElement.id === 'holidayId') {
-				this.codeExecutionWithColour();
-				this.changeOpacity('holidayImage');
-				this.setInnerHtml('outputDayId', 'HOLIDAY');
-	 		}
-	 	}
-		if (this.nextSiblingElement.id === 'ifId')
+		 }
+
+		 
+	 
+		 
+		
+		else if (model.inputNumber === 7 || model.inputNumber === 6) {
+			if (this.nextSiblingElement.id === 'holidayId') {
+			   this.codeExecutionWithColour();
+			   this.changeOpacity('holidayImage');
+			   this.setInnerHtml('outputDayId', 'HOLIDAY');
+			   
+			}
+		}
+    
+
+	
+		if (this.nextSiblingElement.id === 'ifId' ) {
 			this.codeExecutionWithColour();
+
+			
+		}
 		if (this.nextSiblingElement.id === 'closeBrc2Id' || this.nextSiblingElement.id === 'elseId' || this.nextSiblingElement.id === 'elseIfId') {
 			this.codeExecutionWithColourAndId('closeBrc2Id');
 	 	}
