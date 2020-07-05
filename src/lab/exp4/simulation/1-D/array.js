@@ -70,6 +70,7 @@ window.view = {
 			alert( 'Size of the array must be an Integer !' )
 	},
 	generateRandomNumbers: function() {
+		document.getElementById('userInput').disabled = true
 		var inputValue = this.getArraySize()
 		for ( i = 0 ; i < inputValue ; i++ ) {
 			var random = Math.floor(Math.random()*15)
