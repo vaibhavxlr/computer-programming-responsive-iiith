@@ -208,11 +208,15 @@ window.view = {
 	},
 	// showDayOfWeek: shows code execution and gives final result at end of code.
 	showDayOfWeek: function () {
+		
 		this.currentSiblingElement = this.getElementByClass('redClass');
+		
 		if (this.currentSiblingElement.id === 'closeBrc2Id') {
 	 		this.endOfExecution();
 	 	}
-		this.nextSiblingElement = this.getNextSiblingElement(this.currentSiblingElement);
+		
+		 this.nextSiblingElement = this.getNextSiblingElement(this.currentSiblingElement);
+		
 		if (this.nextSiblingElement.id === 'charId' || this.nextSiblingElement.id === 'strId' || this.nextSiblingElement.id === 'switchId')
 			this.codeExecutionWithColour();
 		if (this.nextSiblingElement.id === 'case1Id')
@@ -221,6 +225,7 @@ window.view = {
 			this.codeExecutionWithColour();
 	 	if (this.currentSiblingElement.className === 'break redClass')
 			this.codeExecutionWithColourAndId('closeBrc1Id');
+
 
 		if (1 <= model.inputNumber && model.inputNumber <= 5) {
 			
@@ -233,8 +238,10 @@ window.view = {
 				this.setInnerHtml('outputDayId', 'WORKING DAY');
 			 
 			}
-	 	}
-		if ( model.inputNumber > 7 ) {
+		 }
+		 
+
+		if ( model.inputNumber > 7 || model.inputNumber == 0) {
 	 		if (this.nextSiblingElement.id === 'holidayId') {
 				this.codeExecutionWithColourAndId('elseIfId');
 			 }
