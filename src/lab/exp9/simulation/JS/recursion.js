@@ -11,20 +11,20 @@ window.view = {
 	nextRedDiv: {},
 	last: {},
 	next:{},
-	disks: ['disk1', 'disk2', 'disk3', 'disk4', 'disk5'],
-	position: ['position1', 'position2', 'position3', 'position4', 'position5'],
+	disks: ['disk1', 'disk2', 'disk3', 'disk4', 'disk5', 'disk6', 'disk7', 'disk8', 'disk9', 'disk10'],
+	position: ['position1', 'position2', 'position3', 'position4', 'position5', 'position6', 'position7', 'position8', 'position9', 'position10'],
 	highlightNextStep: function() {
 		this.changeClass(this.lastRedDiv.id, 'showDiv')
 		this.changeClass(this.nextRedDiv.id, 'showDivInRed')
 	},
 	getInput: function() {
 		 var input = Number(document.getElementById('input').value)
-		 if ( input === 0 )
-		 	alert('Enter number of disks first !')
+		  if ( input === 0 )
+		 	alert('No disc movement for zero disks possible')
 		 else if ( isNaN(input) === true )
 			alert('Number of disks must be an integer value !')
-		 else if ( input > 5 || input % 1 !== 0 )
-			alert('Only integral value (Greater than equal to 1 and less than equal to 5) is accepted !')
+		 else if ( input > 10 || input % 1 !== 0 )
+			alert('Only integral value (Greater than equal to 1 and less than equal to 10) is accepted !')
 		 else {
 			this.disableElement('btnOk')
 			this.enableElement('btnStart')

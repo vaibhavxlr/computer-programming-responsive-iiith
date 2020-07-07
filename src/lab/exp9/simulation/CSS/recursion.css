@@ -280,7 +280,7 @@ body {
     background-color: #3072b3;
 }
 
-.disk1, .disk2, .disk3, .disk4, .disk5 {
+.disk1, .disk2, .disk3, .disk4, .disk5,.disk6, .disk7, .disk8, .disk9, .disk10 {
     position: absolute;
     height: 5%;
     border-radius: 7px;
@@ -306,6 +306,26 @@ body {
 
 .position5{
     top: 55%;
+}
+
+.position6{
+    top: 50%;
+}
+
+.position7{
+    top: 45%;
+}
+
+.position8{
+    top: 40%;
+}
+
+.position9{
+    top: 35%;
+}
+
+.position10{
+    top: 30%;
 }
 
 .disk1 {
@@ -338,6 +358,32 @@ body {
     background-color: #ADA692;
 }
 
+.disk6 {
+    left: 35%;
+    width: 30%;
+    background-color: red;
+}
+
+.disk7 {
+    left: 40%;
+    width: 20%;
+    background-color: blue;
+}
+.disk8 {
+    left: 40%;
+    width: 20%;
+    background-color: green;
+}
+.disk9 {
+    left: 40%;
+    width: 20%;
+    background-color: greenyellow;
+}
+.disk10 {
+    left: 40%;
+    width: 20%;
+    background-color: orange;
+}
 .stepExecutionDisplay {
     padding-left: 2%;
     overflow-x: auto;
